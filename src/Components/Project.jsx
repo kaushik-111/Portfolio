@@ -1,40 +1,63 @@
 import React from 'react';
-import './Project.css'; // Make sure to import your CSS file
+import './Project.css'; // Importing CSS file
 
 export default function Project() {
-  // Define an array of card data (image and button texts)
   const cardData = [
     {
-      imgSrc: 'https://via.placeholder.com/280x200',
-      buttonText1: 'Button 1',
-      buttonText2: 'Button 2',
+      imgSrc: '4.png',
+      buttonText1: 'https://kaushik-111.github.io/Admin_Panel/',
+      buttonText2: 'https://github.com/kaushik-111/Admin_Panel',
     },
     {
-      imgSrc: 'https://via.placeholder.com/280x200',
-      buttonText1: 'Button 3',
-      buttonText2: 'Button 4',
+      imgSrc: '1.png',
+      buttonText1: 'https://kaushik-111.github.io/HTML-CSS-1/',
+      buttonText2: 'https://github.com/kaushik-111/HTML-CSS-1',
     },
     {
-      imgSrc: 'https://via.placeholder.com/280x200',
-      buttonText1: 'Button 5',
-      buttonText2: 'Button 6',
+      imgSrc: '2.png',
+      buttonText1: 'https://kaushik-111.github.io/HTML/',
+      buttonText2: 'https://github.com/kaushik-111/HTML',
     },
+    {
+      imgSrc: '3.png',
+      buttonText1: 'https://kaushik-111.github.io/HTML-CSS//',
+      buttonText2: 'https://github.com/kaushik-111/HTML-CSS',
+    }
   ];
 
   return (
-    <div className="container">
-      {/* Dynamically render each card */}
+    <> 
+    <center><h1>Project</h1> <br /></center>
+    <div className='container'>     
+
       {cardData.map((card, index) => (
-        <div className="box" key={index}>
-          <div className="card-content">
-            <img src={card.imgSrc} alt={`Card Image ${index + 1}`} className="card-image" />
-            <div className="buttons">
-              <button className="btn">{card.buttonText1}</button>
-              <button className="btn">{card.buttonText2}</button>
+        <div className='box' key={index}>
+          <div className='card-content'>
+            <img
+              src={card.imgSrc}
+              alt={`Card Image ${index + 1}`}
+              className='card-image'
+            />
+            <div className='buttons'>
+              <a
+                href={card.buttonText1}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <button className='btn'>Live Project</button>
+              </a>
+              <a
+                href={card.buttonText2}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <button className='btn'>GitHub Project</button>
+              </a>
             </div>
           </div>
         </div>
       ))}
     </div>
+    </>
   );
 }

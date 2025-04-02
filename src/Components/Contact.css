@@ -1,0 +1,104 @@
+.contact-container {
+  width: 100%;
+  padding: 50px;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 36px;
+  color: #f9b938; /* Golden color */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+input,
+textarea {
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: white;
+  margin-bottom: 20px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: white;
+}
+
+button {
+  padding: 15px;
+  background-color: #f9b938;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d68f23;
+}
+
+.response-message {
+  margin-top: 20px;
+  color: #f9b938;
+  font-size: 18px;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 767px) {
+  .contact-form {
+    width: 80%; /* Increase form width to 80% for smaller screens */
+    margin: 0 10%;
+  }
+
+  h1 {
+    font-size: 28px; /* Slightly smaller title */
+    margin-bottom: 20px;
+  }
+
+  input,
+  textarea {
+    padding: 12px; /* Reduce padding in inputs for better fit */
+    font-size: 14px; /* Slightly smaller font size for inputs */
+  }
+
+  button {
+    padding: 12px; /* Reduce button padding for small screens */
+    font-size: 14px; /* Reduce font size of button */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-form {
+    width: 90%; /* Make the form take almost full width on very small screens */
+    margin: 0 5%;
+  }
+
+  h1 {
+    font-size: 24px; /* Reduce title size even more */
+    margin-bottom: 15px;
+  }
+
+  input,
+  textarea {
+    padding: 10px; /* Even smaller padding */
+    font-size: 14px; /* Maintain smaller font size */
+  }
+
+  button {
+    padding: 10px; /* Smaller button padding */
+    font-size: 14px; /* Consistent font size */
+  }
+}

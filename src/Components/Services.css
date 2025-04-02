@@ -20,7 +20,6 @@ body {
     background-color: #111;
 }
 
-/* Frontend Section (Creative Design) */
 .frontend, .backend {
     width: 45%;
     border: 2px solid #FFBD39;
@@ -113,5 +112,62 @@ body {
     }
     50% {
         transform: translateY(-5px);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 767px) {
+    .container {
+        flex-direction: column; /* Stack frontend and backend sections vertically */
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .frontend, .backend {
+        width: 100%; /* Make sections take full width */
+        margin: 0;
+    }
+
+    .frontend h1, .backend h2 {
+        font-size: 28px; /* Smaller heading font size */
+        text-shadow: 0 0 5px #ffbd39c2, 0 0 10px #FFBD39; /* Less intense text glow */
+    }
+
+    .frontend p, .backend p {
+        font-size: 14px; /* Smaller text size */
+    }
+
+    .creative-button {
+        font-size: 16px; /* Smaller button font size */
+        padding: 8px 20px; /* Reduced button padding */
+    }
+
+    .service-box {
+        padding: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 10px; /* Reduced padding on very small screens */
+    }
+
+    .frontend h1, .backend h2 {
+        font-size: 24px; /* Even smaller font size for headings */
+    }
+
+    .frontend p, .backend p {
+        font-size: 12px; /* Smaller paragraph text */
+    }
+
+    .creative-button {
+        font-size: 14px; /* Button font size further reduced */
+        padding: 8px 15px; /* Further reduced button padding */
+    }
+
+    .service-box {
+        padding: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
     }
 }

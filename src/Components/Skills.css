@@ -1,150 +1,223 @@
-/* General styles */
-html {
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    scroll-behavior: smooth;
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css'); /* Include Font Awesome */
+
+.skills {
+  margin: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.skl {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.sklLine {
+  margin: 5px 0;
+  color: #555;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+.ProgWidth {
+  margin: 20px 0;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  animation: zoomIn 1.2s ease;
+}
+
+.p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #444;
+  flex: 0 0 30%;
+  text-transform: uppercase;
+  animation: fadeIn 1.5s ease;
+}
+
+.p i {
+  font-size: 24px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.p:hover i {
+  transform: scale(1.2);
+  color: #000;
+}
+
+/* Add specific colors for each icon */
+.p .fa-html5 {
+  color: #f06529;
+}
+
+.p .fa-css3-alt {
+  color: #2965f1;
+}
+
+.p .fa-mobile-alt {
+  color: #e91e63;
+}
+
+.p .fa-code {
+  color: #0769ad;
+}
+
+.p .fa-bootstrap {
+  color: #563d7c;
+}
+
+.p .fa-js-square {
+  color: #f7df1e;
+}
+
+.p .fa-react {
+  color: #61dafb;
+}
+
+.p .fa-node-js {
+  color: #83cd29;
+}
+
+.p .fa-server {
+  color: #888888;
+}
+
+.p .fa-database {
+  color: #00758f;
+}
+
+.p .fa-leaf {
+  color: #4db33d;
+}
+
+.pp {
+  background: linear-gradient(to right, #f9f9f9, #fff);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  flex: 1;
+}
+
+.skillDiv {
+  width: 100%;
+  height: 25px;
+  position: relative;
+  background: #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.skillBar {
+  display: block;
+  height: 100%;
+  border-radius: 12px;
+  animation: growBar 2.5s ease-in-out forwards, zoomBar 1s ease-in-out;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform-origin: left;
+}
+
+.htmlBar {
+  background: linear-gradient(to right, #f06529, #f09a73);
+}
+
+.cssBar {
+  background: linear-gradient(to right, #2965f1, #73a9f1);
+}
+
+.mqBAr {
+  background: linear-gradient(to right, #e91e63, #f48fb1);
+}
+
+.jqBar {
+  background: linear-gradient(to right, #0769ad, #5ea9d6);
+}
+
+.bsBar {
+  background: linear-gradient(to right, #563d7c, #8464a7);
+}
+
+.jspBar {
+  background: linear-gradient(to right, #f7df1e, #f9eb73);
+}
+
+.reactBar {
+  background: linear-gradient(to right, #61dafb, #a6efff);
+}
+
+.nodeBar {
+  background: linear-gradient(to right, #83cd29, #b4e97d);
+}
+
+.esBar {
+  background: linear-gradient(to right, #888888, #bbbbbb);
+}
+
+.sqlBar {
+  background: linear-gradient(to right, #00758f, #5bb9d9);
+}
+
+.mdBar {
+  background: linear-gradient(to right, #4db33d, #81e77a);
+}
+
+/* Keyframes for animations */
+@keyframes growBar {
+  0% {
+    width: 0%;
   }
-  
-  body {
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Skills container */
-  .skills {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
-  }
-  
-  /* Skills heading */
-  .skl {
-    font-size: 28px;
-    font-weight: 700;
-    color: #ffcc00;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-  }
-  
-  .sklLine {
-    font-size: 20px;
-    font-weight: 400;
-    color: #76ff03;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    display: inline-block;
-  }
-  
-  /* Individual skill container */
-  .ProgWidth {
-    margin: 15px 0;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .ProgWidth:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Skill labels */
-  .p {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 10px;
-  }
-  
-  /* Skill bar container */
-  .skillDiv {
-    height: 12px;
+  100% {
     width: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 25px;
-    overflow: hidden;
-    position: relative;
   }
-  
-  /* Skill bar animation */
-  .skillBar {
-    height: 100%;
-    border-radius: 25px;
-    animation: growBar 2s ease-in-out;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes zoomBar {
+  0% {
+    transform: scaleX(0.8);
+    opacity: 0;
   }
-  
-  /* Skill-specific bar colors with gradients */
-  .htmlBar {
-    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
   }
-  
-  .cssBar {
-    background: linear-gradient(90deg, #00c6ff, #0072ff);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
-  .jsBar {
-    background: linear-gradient(90deg, #ffe259, #ffa751);
+  100% {
+    opacity: 1;
   }
-  
-  .javaBar {
-    background: linear-gradient(90deg, #a1c4fd, #c2e9fb);
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
   }
-  
-  .ccpBar {
-    background: linear-gradient(90deg, #f8b195, #f67280);
+  100% {
+    transform: translateX(0);
   }
-  
-  .reactBar {
-    background: linear-gradient(90deg, #61dafb, #0078d7);
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
   }
-  
-  .nodeBar {
-    background: linear-gradient(90deg, #6a9113, #141517);
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
-  
-  .sqlBar {
-    background: linear-gradient(90deg, #ee0979, #ff6a00);
-  }
-  
-  /* Bar animation */
-  @keyframes growBar {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-  
-  /* Hover effect for skill labels */
-  .ProgWidth:hover .p {
-    color: #ffcc00;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  /* Media query for responsiveness */
-  @media (max-width: 768px) {
-    .skills {
-      width: 90%;
-      padding: 20px;
-    }
-  
-    .p {
-      font-size: 14px;
-    }
-  
-    .skl {
-      font-size: 22px;
-    }
-  }
-  
+}

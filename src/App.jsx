@@ -7,10 +7,10 @@ import Services from './Components/Services';
 import './Components/home.css';
 import './Components/about.css';
 import './Components/Services.css';
-// import './Components/skills.css';
 import Navbar from './Components/Navbar';
 import Skills from './Components/Skills';
 import Project from './Components/Project';
+import Contact from './Components/Contect';
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Project />} />
+        <Route path='/contact' element={<Contact />}/>
       </Routes>
     </Router>
   );
